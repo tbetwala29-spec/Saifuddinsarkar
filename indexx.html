@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saifuddin Sarkar | Optician & Social Worker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-blue: #2d8cff;
+            --vibrant-orange: #ff7a45;
+            --electric-purple: #8a2be2;
+            --bright-teal: #00d4aa;
+            --blood-red: #ff4757;
+            --background-gradient: linear-gradient(135deg, #0c2461 0%, #1e3799 50%, #4a69bd 100%);
+            --card-bg: rgba(255, 255, 255, 0.95);
+            --text-dark: #2c3e50;
+            --text-light: #f8f9fa;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--background-gradient);
+            color: var(--text-dark);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+            text-align: center;
+            background: var(--card-bg);
+            border-radius: 25px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            padding-bottom: 30px;
+        }
+
+        /* Header Section */
+        .header {
+            background: linear-gradient(to right, var(--primary-blue), var(--electric-purple));
+            padding: 30px 20px 20px;
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .profile-img-container {
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            background-color: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 5px;
+            letter-spacing: 0.5px;
+        }
+
+        .tagline {
+            font-size: 16px;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.9);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Download Section */
+        .download-section {
+            background: linear-gradient(135deg, rgba(0, 212, 170, 0.1) 0%, rgba(0, 212, 170, 0.2) 100%);
+            border: 2px solid var(--bright-teal);
+            padding: 25px 20px;
+            margin: 0 25px 25px;
+            border-radius: 18px;
+            position: relative;
+        }
+
+        .download-section h2 {
+            font-size: 18px;
+            margin: 0 0 15px;
+            color: var(--bright-teal);
+            font-weight: 700;
+        }
+
+        .download-section p {
+            font-size: 14px;
+            margin: 0 0 20px;
+            color: var(--text-dark);
+        }
+
+        .download-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .download-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            color: var(--text-dark);
+            text-decoration: none;
+            padding: 14px;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid var(--bright-teal);
+        }
+
+        .download-btn:hover {
+            background: var(--bright-teal);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .download-btn i {
+            margin-right: 10px;
+            font-size: 18px;
+        }
+
+        /* Blood Donation Section */
+        .blood-section {
+            background: linear-gradient(135deg, rgba(255, 71, 87, 0.1) 0%, rgba(255, 71, 87, 0.2) 100%);
+            border: 2px solid var(--blood-red);
+            padding: 25px 20px;
+            margin: 0 25px 25px;
+            border-radius: 18px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blood-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--blood-red);
+        }
+
+        .blood-section h2 {
+            font-size: 14px;
+            margin: 0 0 10px;
+            color: var(--blood-red);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+        }
+
+        .blood-section p {
+            font-size: 16px;
+            margin: 0 0 20px;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .donate-btn {
+            display: block;
+            background: linear-gradient(to right, var(--blood-red), #ff6b81);
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 15px rgba(255, 71, 87, 0.4);
+            letter-spacing: 0.5px;
+        }
+
+        .donate-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 71, 87, 0.5);
+            background: linear-gradient(to right, #ff3a4f, var(--blood-red));
+        }
+
+        /* Links Section */
+        .links-section {
+            padding: 0 25px;
+        }
+
+        .link-card {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            background: white;
+            margin-bottom: 15px;
+            padding: 18px 20px;
+            border-radius: 15px;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border-left: 5px solid var(--primary-blue);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .link-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .whatsapp-link {
+            border-left-color: #25d366;
+            color: #25d366;
+        }
+
+        .business-link {
+            border-left-color: var(--electric-purple);
+            color: var(--electric-purple);
+        }
+
+        .instagram-link {
+            border-left-color: #e4405f;
+            color: #e4405f;
+        }
+
+        .facebook-link {
+            border-left-color: #1877f2;
+            color: #1877f2;
+        }
+
+        .icon {
+            font-size: 22px;
+            margin-right: 15px;
+            width: 30px;
+            text-align: center;
+        }
+
+        .link-text {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 30px;
+            padding: 0 25px;
+            font-size: 14px;
+            color: var(--text-dark);
+            opacity: 0.8;
+        }
+
+        .contact-info {
+            font-weight: 700;
+            color: var(--electric-purple);
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+
+        .profession {
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
+
+        /* Hidden canvas for generating image */
+        #downloadCanvas {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <div class="profile-img-container">
+                <img src="MXBX3786.JPG" alt="Saifuddin Sarkar" class="profile-img">
+            </div>
+            
+            <h1>Saifuddin Sarkar</h1>
+            <span class="tagline">Optician & Social Worker</span>
+        </div>
+
+        <!-- NEW: Download Section -->
+        <div class="download-section">
+            <h2>📱 Save for Offline Use</h2>
+            <p>Download your contact details to share offline</p>
+            <div class="download-buttons">
+                <a href="#" id="downloadJPG" class="download-btn">
+                    <i class="fas fa-image"></i> Download as Image (JPG)
+                </a>
+                <a href="#" id="downloadPDF" class="download-btn">
+                    <i class="fas fa-file-pdf"></i> Download as PDF
+                </a>
+                <a href="#" id="downloadVCF" class="download-btn">
+                    <i class="fas fa-address-card"></i> Save as Contact (VCF)
+                </a>
+            </div>
+        </div>
+
+        <div class="blood-section">
+            <h2>Subhash Chandra Bose Raktdaan Committee</h2>
+            <p>Save a Life Today</p>
+            <a href="tel:+919753501786" class="donate-btn">
+                <i class="fas fa-tint icon"></i> DONATE BLOOD NOW
+            </a>
+        </div>
+
+        <div class="links-section">
+            <a href="https://wa.me/919753501786" class="link-card whatsapp-link">
+                <i class="fab fa-whatsapp icon"></i>
+                <span class="link-text">Message on WhatsApp</span>
+            </a>
+
+            <a href="https://share.google/LLAvgqj7QAveAV1wc" target="_blank" class="link-card business-link">
+                <i class="fas fa-briefcase icon"></i>
+                <span class="link-text">Google Business Profile</span>
+            </a>
+
+            <a href="https://www.instagram.com/saifuddinsarkar01786" target="_blank" class="link-card instagram-link">
+                <i class="fab fa-instagram icon"></i>
+                <span class="link-text">Follow on Instagram</span>
+            </a>
+
+            <a href="https://www.facebook.com/saifuddin.betwala.9" target="_blank" class="link-card facebook-link">
+                <i class="fab fa-facebook icon"></i>
+                <span class="link-text">Connect on Facebook</span>
+            </a>
+        </div>
+
+        <div class="footer">
+            <div class="contact-info">
+                <i class="fas fa-phone-alt"></i> +91 97535 01786
+            </div>
+            <div class="profession">
+                Professional Eye Care | Social Welfare
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden canvas for image generation -->
+    <canvas id="downloadCanvas" width="800" height="1000"></canvas>
+
+    <script>
+        // Generate and download JPG
+        document.getElementById('downloadJPG').addEventListener('click', function(e) {
+            e.preventDefault();
+            generateAndDownloadImage();
+        });
+
+        // Generate and download PDF
+        document.getElementById('downloadPDF').addEventListener('click', function(e) {
+            e.preventDefault();
+            generateAndDownloadPDF();
+        });
+
+        // Generate and download VCF
+        document.getElementById('downloadVCF').addEventListener('click', function(e) {
+            e.preventDefault();
+            generateAndDownloadVCF();
+        });
+
+        function generateAndDownloadImage() {
+            const canvas = document.getElementById('downloadCanvas');
+            const ctx = canvas.getContext('2d');
+            
+            // Set background
+            ctx.fillStyle = '#1e293b';
+            ctx.fillRect(0, 0, 800, 1000);
+            
+            // Add gradient header
+            const gradient = ctx.createLinearGradient(0, 0, 800, 200);
+            gradient.addColorStop(0, '#2d8cff');
+            gradient.addColorStop(1, '#8a2be2');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, 800, 250);
+            
+            // Add profile image (will show placeholder since cross-origin)
+            const img = new Image();
+            img.crossOrigin = "anonymous";
+            img.src = 'MXBX3786.JPG';
+            
+            img.onload = function() {
+                // Draw circular profile image
+                ctx.save();
+                ctx.beginPath();
+                ctx.arc(400, 130, 80, 0, Math.PI * 2);
+                ctx.closePath();
+                ctx.clip();
+                ctx.drawImage(img, 320, 50, 160, 160);
+                ctx.restore();
+                
+                // Add white border
+                ctx.beginPath();
+                ctx.arc(400, 130, 82, 0, Math.PI * 2);
+                ctx.lineWidth = 4;
+                ctx.strokeStyle = 'white';
+                ctx.stroke();
+                
+                // Add name
+                ctx.font = 'bold 36px Montserrat, Arial';
+                ctx.fillStyle = 'white';
+                ctx.textAlign = 'center';
+                ctx.fillText('Saifuddin Sarkar', 400, 250);
+                
+                // Add tagline
+                ctx.font = 'bold 18px Poppins, Arial';
+                ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
+                ctx.fillText('Optician & Social Worker', 400, 280);
+                
+                // Add contact info
+                ctx.font = 'bold 24px Poppins, Arial';
+                ctx.fillStyle = '#8a2be2';
+                ctx.fillText('Contact: +91 97535 01786', 400, 350);
+                
+                // Add blood donation section
+                ctx.fillStyle = 'rgba(255, 71, 87, 0.1)';
+                ctx.fillRect(50, 400, 700, 120);
+                ctx.strokeStyle = '#ff4757';
+                ctx.lineWidth = 2;
+                ctx.strokeRect(50, 400, 700, 120);
+                
+                ctx.font = 'bold 16px Poppins, Arial';
+                ctx.fillStyle = '#ff4757';
+                ctx.textAlign = 'left';
+                ctx.fillText('Subhash Chandra Bose Raktdaan Committee', 70, 430);
+                
+                ctx.font = 'bold 20px Poppins, Arial';
+                ctx.fillStyle = '#2c3e50';
+                ctx.fillText('Save a Life Today', 70, 470);
+                
+                ctx.font = 'bold 18px Poppins, Arial';
+                ctx.fillStyle = '#ff4757';
+                ctx.fillText('Emergency Blood Donation: +91 97535 01786', 70, 500);
+                
+                // Add social links
+                ctx.fillStyle = '#f8f9fa';
+                ctx.fillRect(50, 550, 700, 400);
+                
+                ctx.font = 'bold 24px Poppins, Arial';
+                ctx.fillStyle = '#2c3e50';
+                ctx.textAlign = 'center';
+                ctx.fillText('Connect With Me', 400, 600);
+                
+                const links = [
+                    ['WhatsApp', 'https://wa.me/919753501786'],
+                    ['Google Business', 'https://share.google/LLAvgqj7QAveAV1wc'],
+                    ['Instagram', 'https://instagram.com/saifuddinsarkar01786'],
+                    ['Facebook', 'https://facebook.com/saifuddin.betwala.9']
+                ];
+                
+                links.forEach((link, index) => {
+                    const y = 650 + (index * 70);
+                    ctx.font = 'bold 18px Poppins, Arial';
+                    ctx.fillStyle = '#2d8cff';
+                    ctx.textAlign = 'left';
+                    ctx.fillText(link[0], 100, y);
+                    ctx.font = '16px Poppins, Arial';
+                    ctx.fillStyle = '#666';
+                    ctx.fillText(link[1], 100, y + 25);
+                });
+                
+                // Download the image
+                const link = document.createElement('a');
+                link.download = 'Saifuddin-Sarkar-Contact.jpg';
+                link.href = canvas.toDataURL('image/jpeg', 0.9);
+                link.click();
+            };
+            
+            img.onerror = function() {
+                // If image fails to load, use text version
+                drawTextVersion();
+            };
+        }
+
+        function drawTextVersion() {
+            const canvas = document.getElementById('downloadCanvas');
+            const ctx = canvas.getContext('2d');
+            
+            // Simple text-based version
+            ctx.fillStyle = 'white';
+            ctx.fillRect(0, 0, 800, 1000);
+            
+            ctx.font = 'bold 36px Arial';
+            ctx.fillStyle = '#2c3e50';
+            ctx.textAlign = 'center';
+            ctx.fillText('Saifuddin Sarkar', 400, 100);
+            ctx.font = 'bold 24px Arial';
+            ctx.fillText('Optician & Social Worker', 400, 150);
+            ctx.fillText('Contact: +91 97535 01786', 400, 250);
+            
+            // Download
+            const link = document.createElement('a');
+            link.download = 'Saifuddin-Sarkar-Contact.jpg';
+            link.href = canvas.toDataURL('image/jpeg', 0.9);
+            link.click();
+        }
+
+        function generateAndDownloadPDF() {
+            // Create a simple PDF using jsPDF library
+            // Note: For full functionality, you'd need to include jsPDF library
+            alert("PDF download would require jsPDF library. For now, please use the JPG download option.");
+            
+            // Alternative: Create a text file that can be printed as PDF
+            const pdfContent = `
+                SAIFUDDIN SARKAR
+                =================
+                
+                Optician & Social Worker
+                
+                Contact: +91 97535 01786
+                
+                BLOOD DONATION EMERGENCY
+                Subhash Chandra Bose Raktdaan Committee
+                Save a Life Today: +91 97535 01786
+                
+                SOCIAL MEDIA & CONTACTS
+                -----------------------
+                WhatsApp: https://wa.me/919753501786
+                Google Business: https://share.google/LLAvgqj7QAveAV1wc
+                Instagram: https://instagram.com/saifuddinsarkar01786
+                Facebook: https://facebook.com/saifuddin.betwala.9
+                
+                Professional Eye Care | Social Welfare
+                Last Updated: ${new Date().toLocaleDateString()}
+            `;
+            
+            const blob = new Blob([pdfContent], { type: 'text/plain' });
+            const link = document.createElement('a');
+            link.download = 'Saifuddin-Sarkar-Contact.txt';
+            link.href = URL.createObjectURL(blob);
+            link.click();
+        }
+
+        function generateAndDownloadVCF() {
+            // Create VCF (vCard) file
+            const vcfContent = `BEGIN:VCARD
+VERSION:3.0
+FN:Saifuddin Sarkar
+ORG:Optician & Social Worker
+TEL;TYPE=CELL:+919753501786
+TEL;TYPE=WORK:+919753501786
+EMAIL:
+URL:https://tbetwala29-spec.github.io/Saifuddinsarkar/
+NOTE:Subhash Chandra Bose Raktdaan Committee - Blood Donation Emergency Contact
+END:VCARD`;
+            
+            const blob = new Blob([vcfContent], { type: 'text/vcard' });
+            const link = document.createElement('a');
+            link.download = 'Saifuddin-Sarkar.vcf';
+            link.href = URL.createObjectURL(blob);
+            link.click();
+        }
+    </script>
+
+</body>
+</html>
