@@ -4,181 +4,340 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saifuddin Sarkar | Optician & Social Worker</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --bg-color: #0f172a;
-            --card-bg: #1e293b;
-            --primary-blue: #38bdf8;
-            --accent-gold: #fbbf24;
-            --blood-red: #dc2626;
-            --text-white: #f8fafc;
+            --primary-blue: #2d8cff;
+            --vibrant-orange: #ff7a45;
+            --electric-purple: #8a2be2;
+            --bright-teal: #00d4aa;
+            --blood-red: #ff4757;
+            --background-gradient: linear-gradient(135deg, #0c2461 0%, #1e3799 50%, #4a69bd 100%);
+            --card-bg: rgba(255, 255, 255, 0.95);
+            --text-dark: #2c3e50;
+            --text-light: #f8f9fa;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
         body {
-            margin: 0;
-            padding: 20px 0;
             font-family: 'Poppins', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-white);
+            background: var(--background-gradient);
+            color: var(--text-dark);
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            padding: 20px;
+            line-height: 1.6;
         }
 
         .container {
-            width: 90%;
-            max-width: 420px;
+            width: 100%;
+            max-width: 480px;
             text-align: center;
-            padding: 40px 20px;
             background: var(--card-bg);
-            border-radius: 30px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 25px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            padding-bottom: 30px;
         }
 
-        .profile-icon {
-            font-size: 50px;
-            background: linear-gradient(135deg, var(--primary-blue), var(--blood-red));
-            width: 100px;
-            height: 100px;
-            line-height: 100px;
-            border-radius: 50%;
+        /* Header Section */
+        .header {
+            background: linear-gradient(to right, var(--primary-blue), var(--electric-purple));
+            padding: 30px 20px 20px;
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .profile-img-container {
+            width: 140px;
+            height: 140px;
             margin: 0 auto 20px;
-            color: white;
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            background-color: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        h1 {
-            font-size: 26px;
-            margin-bottom: 5px;
-            color: #fff;
-        }
-
-        .tagline {
-            font-size: 14px;
-            color: var(--accent-gold);
-            font-weight: 600;
-            text-transform: uppercase;
-            margin-bottom: 25px;
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             display: block;
         }
 
-        /* Blood Donation Section */
-        .blood-section {
-            background: rgba(220, 38, 38, 0.15);
-            border: 2px solid var(--blood-red);
-            padding: 20px;
-            border-radius: 20px;
-            margin-bottom: 25px;
+        .placeholder-img {
+            font-size: 60px;
+            color: #888;
         }
 
-        .blood-section h2 {
-            font-size: 12px;
-            margin: 0 0 5px;
-            color: #ff9999;
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 5px;
+            letter-spacing: 0.5px;
+        }
+
+        .tagline {
+            font-size: 16px;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.9);
             text-transform: uppercase;
             letter-spacing: 1px;
         }
 
+        /* Blood Donation Section */
+        .blood-section {
+            background: linear-gradient(135deg, rgba(255, 71, 87, 0.1) 0%, rgba(255, 71, 87, 0.2) 100%);
+            border: 2px solid var(--blood-red);
+            padding: 25px 20px;
+            margin: 0 25px 25px;
+            border-radius: 18px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blood-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--blood-red);
+        }
+
+        .blood-section h2 {
+            font-size: 14px;
+            margin: 0 0 10px;
+            color: var(--blood-red);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+        }
+
         .blood-section p {
-            font-size: 15px;
-            margin: 0 0 15px;
+            font-size: 16px;
+            margin: 0 0 20px;
             font-weight: 600;
-            color: #fff;
+            color: var(--text-dark);
         }
 
         .donate-btn {
             display: block;
-            background: var(--blood-red);
+            background: linear-gradient(to right, var(--blood-red), #ff6b81);
             color: white;
             text-decoration: none;
-            padding: 12px;
-            border-radius: 10px;
+            padding: 15px 20px;
+            border-radius: 12px;
             font-weight: 700;
-            font-size: 16px;
-            transition: 0.3s;
-            box-shadow: 0 4px 15px rgba(220, 38, 38, 0.4);
+            font-size: 18px;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 15px rgba(255, 71, 87, 0.4);
+            letter-spacing: 0.5px;
         }
 
         .donate-btn:hover {
-            background: #b91c1c;
-            transform: scale(1.05);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 71, 87, 0.5);
+            background: linear-gradient(to right, #ff3a4f, var(--blood-red));
         }
 
-        /* Standard Links */
+        /* Links Section */
+        .links-section {
+            padding: 0 25px;
+        }
+
         .link-card {
             display: flex;
             align-items: center;
-            justify-content: center;
-            background: rgba(255, 255, 255, 0.07);
-            margin-bottom: 12px;
-            padding: 14px;
-            border-radius: 12px;
+            justify-content: flex-start;
+            background: white;
+            margin-bottom: 15px;
+            padding: 18px 20px;
+            border-radius: 15px;
             text-decoration: none;
-            color: var(--text-white);
-            font-weight: 500;
+            color: var(--text-dark);
+            font-weight: 600;
             transition: all 0.3s ease;
+            border-left: 5px solid var(--primary-blue);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
         }
 
         .link-card:hover {
-            background: var(--primary-blue);
-            color: var(--bg-color);
+            transform: translateX(5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
         }
 
         .whatsapp-link {
-            border: 1px solid #25d366;
+            border-left-color: #25d366;
             color: #25d366;
         }
 
-        .footer {
-            margin-top: 30px;
-            font-size: 11px;
-            opacity: 0.6;
-            line-height: 1.6;
+        .business-link {
+            border-left-color: var(--electric-purple);
+            color: var(--electric-purple);
         }
 
-        .icon { margin-right: 10px; }
+        .instagram-link {
+            border-left-color: #e4405f;
+            color: #e4405f;
+        }
+
+        .facebook-link {
+            border-left-color: #1877f2;
+            color: #1877f2;
+        }
+
+        .icon {
+            font-size: 22px;
+            margin-right: 15px;
+            width: 30px;
+            text-align: center;
+        }
+
+        .link-text {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 30px;
+            padding: 0 25px;
+            font-size: 14px;
+            color: var(--text-dark);
+            opacity: 0.8;
+        }
+
+        .contact-info {
+            font-weight: 700;
+            color: var(--electric-purple);
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+
+        .profession {
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
+
+        /* Instructions for image upload */
+        .image-instruction {
+            background: #f8f9fa;
+            padding: 15px;
+            margin: 20px 25px;
+            border-radius: 12px;
+            font-size: 13px;
+            color: #666;
+            border-left: 4px solid var(--bright-teal);
+        }
+
+        .image-instruction strong {
+            color: var(--electric-purple);
+        }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="profile-icon">👓</div>
-        
-        <h1>Saifuddin Sarkar</h1>
-        <span class="tagline">Optician & Social Worker</span>
+        <div class="header">
+            <div class="profile-img-container">
+                <!-- Replace this div with your image -->
+                <!-- <img src="YOUR_IMAGE_HERE.jpg" alt="Saifuddin Sarkar" class="profile-img"> -->
+                <div class="placeholder-img">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+            </div>
+            
+            <h1>Saifuddin Sarkar</h1>
+            <span class="tagline">Optician & Social Worker</span>
+        </div>
+
+        <div class="image-instruction">
+            <img src="MXBX3786.JPG" alt="Saifuddin Sarkar" class="profile-img">
+        </div>
 
         <div class="blood-section">
             <h2>Subhash Chandra Bose Raktdaan Committee</h2>
             <p>Save a Life Today</p>
             <a href="tel:+919753501786" class="donate-btn">
-                <span class="icon">🩸</span> DONATE BLOOD NOW
+                <i class="fas fa-tint icon"></i> DONATE BLOOD NOW
             </a>
         </div>
 
-        <a href="https://wa.me/919753501786" class="link-card whatsapp-link">
-            <span class="icon">💬</span> Message on WhatsApp
-        </a>
+        <div class="links-section">
+            <a href="https://wa.me/919753501786" class="link-card whatsapp-link">
+                <i class="fab fa-whatsapp icon"></i>
+                <span class="link-text">Message on WhatsApp</span>
+            </a>
 
-        <a href="https://share.google/LLAvgqj7QAveAV1wc" target="_blank" class="link-card">
-            <span class="icon">📍</span> Google Business
-        </a>
+            <a href="https://share.google/LLAvgqj7QAveAV1wc" target="_blank" class="link-card business-link">
+                <i class="fas fa-briefcase icon"></i>
+                <span class="link-text">Google Business Profile</span>
+            </a>
 
-        <a href="https://www.instagram.com/saifuddinsarkar01786" target="_blank" class="link-card">
-            <span class="icon">📸</span> Instagram
-        </a>
+            <a href="https://www.instagram.com/saifuddinsarkar01786" target="_blank" class="link-card instagram-link">
+                <i class="fab fa-instagram icon"></i>
+                <span class="link-text">Follow on Instagram</span>
+            </a>
 
-        <a href="https://www.facebook.com/saifuddin.betwala.9" target="_blank" class="link-card">
-            <span class="icon">👥</span> Facebook
-        </a>
+            <a href="https://www.facebook.com/saifuddin.betwala.9" target="_blank" class="link-card facebook-link">
+                <i class="fab fa-facebook icon"></i>
+                <span class="link-text">Connect on Facebook</span>
+            </a>
+        </div>
 
         <div class="footer">
-            <strong>Contact:</strong> +91 97535 01786<br>
-            Professional Eye Care | Social Welfare
+            <div class="contact-info">
+                <i class="fas fa-phone-alt"></i> +91 97535 01786
+            </div>
+            <div class="profession">
+                Professional Eye Care | Social Welfare
+            </div>
         </div>
     </div>
+
+    <script>
+        // Add hover effects and animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const linkCards = document.querySelectorAll('.link-card');
+            
+            linkCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateX(5px)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateX(0)';
+                });
+            });
+            
+            // Blood donation button animation
+            const donateBtn = document.querySelector('.donate-btn');
+            donateBtn.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-3px)';
+            });
+            
+            donateBtn.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
 
 </body>
 </html>
