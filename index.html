@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saifuddin Sarkar | Optician & Social Worker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --primary-blue: #38bdf8;
+            --accent-gold: #fbbf24;
+            --blood-red: #dc2626;
+            --text-white: #f8fafc;
+        }
+
+        body {
+            margin: 0;
+            padding: 20px 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-white);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 420px;
+            text-align: center;
+            padding: 40px 20px;
+            background: var(--card-bg);
+            border-radius: 30px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .profile-icon {
+            font-size: 50px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--blood-red));
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            color: white;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+        }
+
+        h1 {
+            font-size: 26px;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+
+        .tagline {
+            font-size: 14px;
+            color: var(--accent-gold);
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            display: block;
+        }
+
+        /* Blood Donation Section */
+        .blood-section {
+            background: rgba(220, 38, 38, 0.15);
+            border: 2px solid var(--blood-red);
+            padding: 20px;
+            border-radius: 20px;
+            margin-bottom: 25px;
+        }
+
+        .blood-section h2 {
+            font-size: 12px;
+            margin: 0 0 5px;
+            color: #ff9999;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .blood-section p {
+            font-size: 15px;
+            margin: 0 0 15px;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .donate-btn {
+            display: block;
+            background: var(--blood-red);
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 16px;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(220, 38, 38, 0.4);
+        }
+
+        .donate-btn:hover {
+            background: #b91c1c;
+            transform: scale(1.05);
+        }
+
+        /* Standard Links */
+        .link-card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.07);
+            margin-bottom: 12px;
+            padding: 14px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--text-white);
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .link-card:hover {
+            background: var(--primary-blue);
+            color: var(--bg-color);
+        }
+
+        .whatsapp-link {
+            border: 1px solid #25d366;
+            color: #25d366;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 11px;
+            opacity: 0.6;
+            line-height: 1.6;
+        }
+
+        .icon { margin-right: 10px; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="profile-icon">👓</div>
+        
+        <h1>Saifuddin Sarkar</h1>
+        <span class="tagline">Optician & Social Worker</span>
+
+        <div class="blood-section">
+            <h2>Subhash Chandra Bose Raktdaan Committee</h2>
+            <p>Save a Life Today</p>
+            <a href="tel:+919753501786" class="donate-btn">
+                <span class="icon">🩸</span> DONATE BLOOD NOW
+            </a>
+        </div>
+
+        <a href="https://wa.me/919753501786" class="link-card whatsapp-link">
+            <span class="icon">💬</span> Message on WhatsApp
+        </a>
+
+        <a href="https://share.google/LLAvgqj7QAveAV1wc" target="_blank" class="link-card">
+            <span class="icon">📍</span> Google Business
+        </a>
+
+        <a href="https://www.instagram.com/saifuddinsarkar01786" target="_blank" class="link-card">
+            <span class="icon">📸</span> Instagram
+        </a>
+
+        <a href="https://www.facebook.com/saifuddin.betwala.9" target="_blank" class="link-card">
+            <span class="icon">👥</span> Facebook
+        </a>
+
+        <div class="footer">
+            <strong>Contact:</strong> +91 97535 01786<br>
+            Professional Eye Care | Social Welfare
+        </div>
+    </div>
+
+</body>
+</html>
